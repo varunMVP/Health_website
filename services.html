@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Health & Hygiene Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #4CAF50;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+        .logo {
+            height: 50px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .feature {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 250px;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        .feature h2 {
+            color: #4CAF50;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .feature p {
+            flex-grow: 1;
+        }
+        .feature a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        .feature a:hover {
+            background-color: #45a049;
+        }
+        .img {
+            height: 400px;
+            width: 100%;
+            background-image: url('bgg.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 30px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .navbar .logout-btn {
+            background-color: #ff4136;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .navbar .logout-btn:hover {
+            background-color: #dc352d;
+        }
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+        }
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            background-color: #e8f5e9;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #4CAF50;
+        }
+        .service-content {
+            flex-grow: 1;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="/api/placeholder/100/50" alt="Health & Hygiene Hub Logo" class="logo">
+        <div>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.php" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Our Services</h1>
+        <div class="img"></div>
+        <p>At Health & Hygiene Hub, we offer a comprehensive range of services designed to support your journey towards better health and hygiene. Our expert team is dedicated to providing you with the tools, information, and support you need to live your healthiest life.</p>
+
+        <div class="service-card">
+            <div class="service-icon">🥗</div>
+            <div class="service-content">
+                <h2>Nutritious Recipes</h2>
+                <p>Discover a world of delicious and healthy recipes curated by our nutrition experts. From quick and easy meals to gourmet dishes, we've got options for every taste and dietary requirement.</p>
+                <a href="nutritoun.html" class="cta-button">Explore Recipes</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🏋️</div>
+            <div class="service-content">
+                <h2>Exercise Tips</h2>
+                <p>Get expert advice on exercise routines tailored to your fitness level and goals. Our certified trainers provide tips on proper form, workout plans, and motivation to keep you moving.</p>
+                <a href="exercise.html" class="cta-button">Get Fit Now</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💊</div>
+            <div class="service-content">
+                <h2>Medicine Booking</h2>
+                <p>Never run out of essential medications again. Our convenient booking service ensures you always have the prescriptions you need, when you need them.</p>
+                <a href="medicine_booking.php" class="cta-button">Book Medicines</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🚑</div>
+            <div class="service-content">
+                <h2>Emergency Services Information</h2>
+                <p>Access critical information about local emergency services, including contact numbers, locations, and basic first aid guidelines. Be prepared for any situation.</p>
+                <a href="emergency.html" class="cta-button">Emergency Info</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">👨‍⚕️</div>
+            <div class="service-content">
+                <h2>Doctor Appointments</h2>
+                <p>Schedule appointments with top healthcare professionals in your area. Our booking system makes it easy to find the right doctor and time slot for your needs.</p>
+                <a href="doctor_app.php" class="cta-button">Book Appointment</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🍲</div>
+            <div class="service-content">
+                <h2>Sick Diet Plans</h2>
+                <p>When you're under the weather, proper nutrition is crucial. Our dietitians provide customized meal plans to support your recovery and boost your immune system.</p>
+                <a href="sick_diet.php" class="cta-button">Get Diet Plan</a>
+            </div>
+        </div>
+
+        <p>Each of our services is designed to support your journey towards better health and hygiene. Click on any service to learn more and get started!</p>
+
+        <a href="contact.html" class="cta-button">Contact Us for More Information</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Health & Hygiene Hub. All rights reserved.</p>
+        <p>Promoting wellness through informed choices and healthy habits.</p>
+        <p>Follow us on: 
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </p>
+        <p><a href="privacy_policy.html">Privacy Policy</a> | 
+           <a href="terms_of_service.html">Terms of Service</a>
+        </p>
+    </footer>
+</body>
+</html>

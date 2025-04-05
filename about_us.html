@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Health & Hygiene Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #4CAF50;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+        .logo {
+            height: 50px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .feature {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 250px;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        .feature h2 {
+            color: #4CAF50;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .feature p {
+            flex-grow: 1;
+        }
+        .feature a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        .feature a:hover {
+            background-color: #45a049;
+        }
+        .img {
+            height: 400px;
+            width: 100%;
+            background-image: url("/api/placeholder/1200/400");
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 30px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .navbar .logout-btn {
+            background-color: #ff4136;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .navbar .logout-btn:hover {
+            background-color: #dc352d;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="/api/placeholder/100/50" alt="Health & Hygiene Hub Logo" class="logo">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="user_info.html">User Info</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="logout.php" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>About Health & Hygiene Hub</h1>
+        <p>Health & Hygiene Hub is dedicated to promoting wellness and healthy living. Our mission is to provide accessible, reliable information and services to help you maintain optimal health.</p>
+        <p>Founded in 2024, we've been working tirelessly to create a comprehensive platform that addresses various aspects of health and hygiene, from nutritious recipes to emergency services.</p>
+        <p>Our team of experts includes nutritionists, fitness trainers, and healthcare professionals who are passionate about helping you achieve your health goals.</p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Health & Hygiene Hub. All rights reserved.</p>
+        <p>Promoting wellness through informed choices and healthy habits.</p>
+        <p>Follow us on: 
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </p>
+        <p><a href="privacy_policy.html">Privacy Policy</a> | 
+           <a href="terms_of_service.html">Terms of Service</a>
+        </p>
+    </footer>
+</body>
+</html>

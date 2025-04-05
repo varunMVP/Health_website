@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+    </style>
+<body>
+    <h1>Symptom Checker</h1>
+
+    <p>Enter your symptom:</p>
+    <form id="symptomForm" onsubmit="checkSymptoms(event)">
+        <input type="text" id="symptomInput" placeholder="Enter your symptom">
+        <button type="submit">Check</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function checkSymptoms(event) {
+    event.preventDefault();
+
+    const symptom = document.getElementById('symptomInput').value;
+    const resultDiv = document.getElementById('result');
+
+    // Replace this with your logic to fetch data from a database or use a predefined list
+    const symptomData = {
+        "cold": {
+            "description": "Common cold symptoms include runny nose, sneezing, sore throat, and congestion.",
+            "treatment": "Rest, fluids, over-the-counter pain relievers"
+        },
+        // Add more symptoms and their corresponding information here
+    };
+
+    const symptomInfo = symptomData[symptom];
+
+    if (symptomInfo) {
+        resultDiv.innerHTML = `
+            <h2>${symptom}</h2>
+            <p>${symptomInfo.description}</p>
+            <p><strong>Treatment suggestions:</strong> ${symptomInfo.treatment}</p>
+        `;
+    } else {
+        resultDiv.innerHTML = `<p>No information found for the symptom "${symptom}". Please try another symptom.</p>`;
+    }
+}
+    </script>
+</body>
+</html>

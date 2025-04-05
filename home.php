@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Hygiene Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        .navbar {
+            background-color: #4CAF50;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 16px;
+        }
+        .logo {
+            height: 50px;
+        }
+        .main-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .feature {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        .feature h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .feature a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .feature a:hover {
+            background-color: #45a049;
+        }
+        #tipOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #tipBox {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .img{
+            height: 600px;
+            width: 100%;
+            background-image: url("bggc.jpg");
+            background-size: cover;
+        }
+        #symptomForm {
+            margin-top: 20px;
+        }
+        #symptomInput {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #symptomSubmit {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="/api/placeholder/100/50" alt="Logo" class="logo">
+        <div>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#user-info">User Info</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </div>
+    <div class="img">
+
+    </div>
+    <div id="tipOverlay">
+        <div id="tipBox">
+            <h2>Tip of the Day</h2>
+            <p id="dailyTip">Stay hydrated! Drink at least 8 glasses of water daily.</p>
+            <button onclick="closeTip()">OK</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="feature-grid">
+            <div class="feature">
+                <h2>Nutritious Recipes</h2>
+                <p>Discover delicious and healthy recipes to fuel your body.</p>
+                <a href="nutritoun.html">Explore Recipes</a>
+            </div>
+            <div class="feature">
+                <h2>Exercise Tips</h2>
+                <p>Get fit with our expert exercise recommendations.</p>
+                <a href="exercise.html">View Exercise Tips</a>
+            </div>
+            <div class="feature">
+                <h2>Medicine Booking</h2>
+                <p>Order your prescriptions online for convenient pickup.</p>
+                <a href="medicine_booking.html">Book Medicine</a>
+            </div>
+            <div class="feature">
+                <h2>Call Ambulance</h2>
+                <p>Quick access to emergency services when you need them most.</p>
+                <a href="emergency.html">Emergency Services</a>
+            </div>
+            <div class="feature">
+                <h2>Get Doctor Appointment</h2>
+                <p>Schedule a visit with our experienced healthcare professionals.</p>
+                <a href="doctor_app.php">Book Appointment</a>
+            </div>
+            <div class="feature">
+                <h2>Symptom Checker</h2>
+                <p>Get a dietary according to sickness.</p>
+                <a href="sick_diet.php">Get sick diet</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function closeTip() {
+            document.getElementById('tipOverlay').style.display = 'none';
+        }
+
+        function checkSymptoms(event) {
+            event.preventDefault();
+            const symptom = document.getElementById('symptomInput').value;
+            window.location.href = `symptom_checker.html?symptom=${encodeURIComponent(symptom)}`;
+        }
+    </script>
+</body>
+</html>
