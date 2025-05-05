@@ -113,15 +113,15 @@ To deploy on a platform like **InfinityFree**, **000WebHost**, or **Netlify** wi
 
 ### 1. Home Page
 
-![Home Page](path/to/homepage-screenshot.png)
+![Image](https://github.com/user-attachments/assets/d8002062-84d4-4da9-839d-2ee9fd9ad7dc)
 
 ### 2. Login Page
 
-![Login Page](path/to/login-screenshot.png)
+![Image](https://github.com/user-attachments/assets/4176d9e0-0220-4bba-85a4-6a7cb7080879)
 
-### 3. Appointment Booking Form
+### 3. Excersise page
 
-![Appointment Form](path/to/appointment-screenshot.png)
+![Image](https://github.com/user-attachments/assets/d35fcd0e-cb4e-4cad-853f-286a3302f66f)
 
 ---
 
